@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  microservicio:
+    image: santiagoprada1029/santiagopradatrack1
+    ports:
+      - "8087:8087"
+    environment:
+      - PORT=8087
