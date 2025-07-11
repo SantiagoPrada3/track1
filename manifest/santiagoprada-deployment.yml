@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
       - name: microservice
-        image: santiagoprada1029/santiago-prada:v1
+        image: santiagoprada1029/santiago-prada:v2
