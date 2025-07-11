@@ -1,0 +1,8 @@
+# kubectl apply -f namespace.yml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: santiagoprada-namespace
+  labels: 
+      name: santiagoprada-namespace
+      app: microservice

@@ -1,0 +1,16 @@
+# kubectl apply -f service.yml
+apiVersion: v1
+kind: Service
+metadata:
+  name: santiagoprada-service
+  namespace: santiagoprada-namespace
+  labels:
+      app: microservice
+spec:
+  type: NodePort  # Expondrá el puerto a través de un nodo del clúster
+  ports:
+    - port: 8088           # Puerto interno del servicio (acceso desde el clúster) http://svc:80
+      targetPort: 8087   # Puerto donde escucha tu contenedor (en el Pod)
+      nodePort: 30088   # Puerto expuesto desde fuera del clúster (acceso externo) Rango válido: 30000-32767
+  selector:
+    app: microservice # Debe coincidir con los labels del Deployment/Pod
